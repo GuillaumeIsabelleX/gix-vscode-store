@@ -2,7 +2,7 @@
     "name": "gix-vscode-xstore",
     "displayName": "GIX xStore",
     "description": "Store values into global variable serialized into a JSON File.",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "guillaumeisabelle",
     "engines": {
         "vscode": "^1.17.0"
