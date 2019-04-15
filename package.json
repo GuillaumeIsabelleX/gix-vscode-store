@@ -1,9 +1,9 @@
 {
-    "name": "vscode-store",
-    "displayName": "Store",
-    "description": "Verb: keep or accumulate (something) for future use.",
-    "version": "0.0.1",
-    "publisher": "cg-cnu",
+    "name": "gix-vscode-xstore",
+    "displayName": "GIX xStore",
+    "description": "Store values into global variable serialized into a JSON File.",
+    "version": "0.0.4",
+    "publisher": "guillaumeisabelle",
     "engines": {
         "vscode": "^1.17.0"
     },
@@ -11,18 +11,16 @@
         "Other"
     ],
     "author": {
-        "email": "sreenivas9alapati@gmail.com",
-        "name": "Sreenivas Alapati",
-        "url": "https://twitter.com/cgcnu"
+        "name":"Guillaume Isabelle",
+        "url": "https://github.com/GuillaumeIsabelleX/gix-vscode-store"
     },
     "bugs": {
-        "email": "sreenivas9alapati@gmail.com",
-        "url": "https://github.com/cg-cnu/vscode-store/issues"
+        "url": "https://github.com/GuillaumeIsabelleX/gix-vscode-store/issues"
     },
     "icon": "icons/store-128.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/cg-cnu/vscode-store.git"
+        "url": "https://github.com/GuillaumeIsabelleX/gix-vscode-store.git"
     },
     "readme": "README.md",
     "license": "MIT",
@@ -34,38 +32,42 @@
     ],
     "homepage": "https://github.com/cg-cnu/vscode-store",
     "activationEvents": [
-        "onCommand:store.set",
-        "onCommand:store.remove",
-        "onCommand:store.open",
-        "onCommand:store.get"
+        "onCommand:xstore.set",
+        "onCommand:xstore.remove",
+        "onCommand:xstore.open",
+        "onCommand:xstore.get"
     ],
-    "main": "./out/store",
+    "main": "./out/xstore",
     "contributes": {
         "commands": [
             {
-                "command": "store.set",
-                "title": "Store: Set"
+                "command": "xstore.set",
+                "title": "xStore: Set"
             },
             {
-                "command": "store.get",
-                "title": "Store: Get"
+                "command": "xstore.get",
+                "title": "xStore: Get"
             },
             {
-                "command": "store.remove",
-                "title": "Store: Remove"
+                "command": "xstore.remove",
+                "title": "xStore: Remove"
             },
             {
-                "command": "store.open",
-                "title": "Store: Open"
+                "command": "xstore.open",
+                "title": "xStore: Open"
             }
         ],
         "configuration": [
             {
                 "title": "Store path configuration",
                 "properties": {
-                    "store.path": {
+                    "xstore.path": {
                         "description": "location of the store file",
                         "type": "string"
+                    },
+                    "xstore.bypassoverwrites": {
+                        "description": "Define if bypassing overwritting of existing var. default will overwrite var that exist",
+                        "type": "boolean"
                     }
                 }
             }
